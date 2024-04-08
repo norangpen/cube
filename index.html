@@ -1,52 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Three.js Application</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cube</title>
     <style>
-        body { margin: 0; overflow: hidden; }
-        canvas { display: block; }
+      body {
+        margin: 0;
+      }
     </style>
-</head>
-<body>
-    <script type="module">
-        import * as THREE from 'https://unpkg.com/three@0.163.0/build/three.module.js';
-        import { OBJLoader } from 'https://unpkg.com/three@0.163.0/examples/jsm/loaders/OBJLoader.js';
-
-        let scene, camera, renderer, cube;
-
-        function init() {
-            scene = new THREE.Scene();
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            renderer = new THREE.WebGLRenderer();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            document.body.appendChild(renderer.domElement);
-
-            const loader = new OBJLoader();
-            loader.load('models/Cube.obj', function (object) {
-                cube = object;
-                scene.add(cube);
-                cube.position.set(0, 0, 0);
-            });
-
-            camera.position.z = 5;
-
-            animate();
-        }
-
-        function animate() {
-            requestAnimationFrame(animate);
-
-            if (cube) {
-                // This rotation is just for demonstration
-                // Replace or modify this logic as needed for your project
-                cube.rotation.y += 0.01;
-            }
-
-            renderer.render(scene, camera);
-        }
-
-        init();
-    </script>
-</body>
+  </head>
+  <body>
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
