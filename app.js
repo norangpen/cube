@@ -1,5 +1,5 @@
-import * as THREE from 'https://unpkg.com/three@0.149.0/build/three.module.js';
-import { OBJLoader } from 'https://unpkg.com/three@0.149.0/examples/jsm/loaders/OBJLoader.js';
+import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+import { OBJLoader } from 'https://unpkg.com/three/examples/jsm/loaders/OBJLoader.js';
 
 let scene, camera, renderer, cube;
 
